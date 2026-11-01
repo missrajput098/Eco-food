@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  /* =========================================
+     ORGANIC FOOD STORE - CSS ROOT VARIABLES
+     Clean, reusable design tokens
+     ========================================= */
+
+  /* Primary Greens */
+  --primary: #1b3d22;
+  --primary-hover: #142f1a;
+  --primary-light: #295733;
+  --primary-soft: #eaf4ed;
+  
+  /* Accent Green */
+  --accent: #2e7d32;
+  --accent-light: #81c784;
+  --accent-tint: #f1f8f3;
+
+  /* Neutrals & Backgrounds */
+  --bg-page: #fbfbf9;
+  --bg-card: #ffffff;
+  --bg-subtle: #f5f7f4;
+  --bg-banner: #16361e;
+  --bg-footer: #0d1e12;
+  --bg-banner-alt: #13301a;
+
+  /* Text Colors */
+  --text-heading: #142417;
+  --text-body: #4c6052;
+  --text-muted: #829487;
+  --text-light: #f0f7f2;
+  --text-white: #ffffff;
+
+  /* Badges */
+  --badge-orange: #d9531e;
+  --badge-orange-bg: #fdf2ed;
+  --badge-teal: #0d8a68;
+  --badge-teal-bg: #ebf9f5;
+  --badge-green: #1b5e20;
+  --badge-green-bg: #e8f5e9;
+
+  /* Borders & Shadows */
+  --border-color: #e4ece6;
+  --border-light: #eff4f0;
+  --shadow-card: 0 4px 20px -2px rgba(15, 34, 20, 0.06);
+  --shadow-hover: 0 14px 32px -4px rgba(15, 34, 20, 0.12);
+  --shadow-banner: 0 20px 40px -10px rgba(13, 30, 18, 0.35);
+
+  /* Radius Tokens */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-tint: var(--accent-tint);
+  --color-bg-page: var(--bg-page);
+  --color-bg-card: var(--bg-card);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-banner: var(--bg-banner);
+  --color-bg-footer: var(--bg-footer);
+  --color-text-heading: var(--text-heading);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-color);
+  --color-border-light: var(--border-light);
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-body);
+  background-color: var(--bg-page);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility custom classes using CSS root variables */
+.bg-primary-custom {
+  background-color: var(--primary);
+}
+
+.bg-primary-custom:hover {
+  background-color: var(--primary-hover);
+}
+
+.text-primary-custom {
+  color: var(--primary);
+}
+
+.text-heading-custom {
+  color: var(--text-heading);
+}
+
+.text-body-custom {
+  color: var(--text-body);
+}
+
+.text-muted-custom {
+  color: var(--text-muted);
+}
+
+.border-custom {
+  border-color: var(--border-color);
+}
+
+.shadow-custom-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-custom-hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd8cf;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ab3a1;
+}
